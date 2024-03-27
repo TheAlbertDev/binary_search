@@ -48,15 +48,15 @@ TEST(BinarySearch, InitFifoNeverFullyWritten)
     CHECK_EQUAL(7U, fifo_indexes.head);
 }
 
-// TEST(BinarySearch, InitFifoEmptyNeverWritten)
-// {
-//     uint32_t arr[] = { 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU};
+TEST(BinarySearch, InitFifoEmptyNeverWritten)
+{
+    uint32_t arr[] = { 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU};
 
-//     Fifo_Indexes_t fifo_indexes =  init_fifo_indexes(arr, sizeof(arr)/sizeof(arr[0]));
+    Fifo_Indexes_t fifo_indexes =  init_fifo_indexes(arr, sizeof(arr)/sizeof(arr[0]));
 
-//     CHECK_EQUAL(0U, fifo_indexes.tail);
-//     CHECK_EQUAL(0U, fifo_indexes.head);
-// }
+    CHECK_EQUAL(0U, fifo_indexes.tail);
+    CHECK_EQUAL(0U, fifo_indexes.head);
+}
 
 TEST(BinarySearch, InitFifoEmptyAllWritten)
 {
