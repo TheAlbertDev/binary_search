@@ -1,0 +1,4 @@
+.DS_Store
+test/build
+test/binary_search_tests
+test/binary_search_tests.txt
